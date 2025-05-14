@@ -1,4 +1,4 @@
-const baseUrl = "https://boolean-spec-frontend.vercel.app/freetestapi";
+const baseUrl = "http://localhost:3333"
 async function getDashboardData(query) {
     try {
         const [destRes, weatherRes, airportRes] = await Promise.all([
@@ -39,7 +39,7 @@ async function getDashboardData(query) {
 }
 
 
-getDashboardData('London')
+getDashboardData('london')
     .then(data => {
         console.log('Dashboard data:', data);
         console.log(
